@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "typescript": "^5.9.3"
+    
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  }
+}
+

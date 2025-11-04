@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/fontawesome-free-7.1.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="searchPopupModal"></div>
+ <div class="searchPopupModalEdit"></div>
+    <div class="container">
+      <h1 class="text-3xl text-center font-bold mt-12 mb-12">Личные данные кандидатов</h1>
+      <h2></h2>
+      <div class="flex flex-col xl:flex-row justify-between items-center gap-10 mb-12">
+        <div class="w-full xl:w-auto">
+          <input id="inputName" type="text" class="input mr-5 mb-3 xl:mb-0 shadow-lg w-full xl:w-auto" placeholder="Введите имя">
+          <input id="inputVacancy" type="text" class="input mr-5  mb-3 xl:mb-0 shadow-lg w-full xl:w-auto" placeholder="Введите вакансию">
+          <input id="inputPhone" type="text" class="input mr-5  mb-3 xl:mb-0 shadow-lg w-full xl:w-auto" placeholder="Введите телефон +7...">
+          <button id="btnAdd" class="btn shadow-lg w-full xl:w-auto bg-gray-700 text-white">Добавить</button>
+        </div>
+       <div class="w-full xl:w-auto grid xl:block">
+         <button id="btnClearList" class="btn mr-5 w-full shadow-lg mb-3 xl:mb-0 w-full xl:w-auto bg-[#b15a5a] text-white">Удалить всё</button>
+        <button id="btnSearch" class="btn shadow-lg bg-gray-700 text-white">Поиск</button>
+       </div>
+      </div>
+      <div>
+        <div id="table" class="block gap-10 grid-cols-2 md:grid">
+          <ul id="firstColumn" class="candidatesList"></ul>
+         <ul id="secondColumn" class="candidatesList"></ul>
+        </div>
+      </div>
+      <div class="searchPopup">
+        
+          <button class="btnCloseModal"><i class="fa-solid fa-xmark"></i></button>
+          <h2 class="text-center mb-10 text-3xl font-bold">Поиск кандидатов</h2>
+          <input id="searchCandidatesListResult" type="text" placeholder="Поиск...">
+          <ul id="searchCandidatesList"></ul>
+          <button id="showAllCandidates" class="btn btn-edit">Показать всех</button>
+        
+      </div>
+      <div id="modalEdit" class="rounded-md p-10 bg-white flex flex-col ">
+          <button class="btnCloseModal absolute right-3 top-3"><i class="fa-solid fa-xmark"></i></button>
+          <div class="mb-3"><input id="nameEdit" type="text" class="input  shadow-lg " ></div>
+          <div class="mb-3"><input id="vacancyEdit" type="text" class="input  shadow-lg" ></div>
+          <div class="mb-6"><input id="phoneEdit" type="text" class="input  shadow-lg "></div>
+          <button id="btnEditCandidate" class="btn btn-edit shadow-lg">Изменить</button>
+      </div>
+    </div>
+    <script src="/dist/index.js"></script>
+</body>
+</html>
